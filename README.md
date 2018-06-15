@@ -49,5 +49,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Angular 只会绑定到组件的公共属性(constructor中设置public属性)
 - `--flat` 把这个文件放进了 src/app 中，而不是单独的目录中
   `--module=app` 告诉 CLI 把它注册到 AppModule 的 imports 数组中
+- `routerLink`是 RouterLink 指令的选择器 会把用户的点击转换为路由器的导航操作
+- Routes数组中`{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }`路由匹配为默认显示的路由
+- path 中的冒号（:）表示 :id 是一个占位符，它表示某个特定英雄的 id
+- ActivatedRoute 保存着到这个 HeroDetailComponent 实例的路由信息。 这个组件对从 URL 中提取的路由参数感兴趣。 其中的 id 参数就是要现实的英雄的 id。
+  location 是一个 Angular 的服务，用来与浏览器打交道
+- `route.snapshot` 是一个路由信息的静态快照，抓取自组件刚刚创建完毕之后
+- `paramMap` 是一个从 URL 中提取的路由参数值的字典
+- JavaScript 的 (+) 操作符会把字符串转换成数字
+- forRoot() 配置方法接受一个 InMemoryDataService 类（初期的内存数据库）作为参数
+- HttpClient.put() 方法接受三个参数:URL 地址,要修改的数据（这里就是修改后的英雄）,选项
 
 
