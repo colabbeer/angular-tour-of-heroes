@@ -58,6 +58,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - `paramMap` 是一个从 URL 中提取的路由参数值的字典
 - JavaScript 的 (+) 操作符会把字符串转换成数字
 - forRoot() 配置方法接受一个 InMemoryDataService 类（初期的内存数据库）作为参数
-- HttpClient.put() 方法接受三个参数:URL 地址,要修改的数据（这里就是修改后的英雄）,选项
-
+- HttpClient.put() 方法接受三个参数:URL 地址,要修改的数据（这里就是修改后的英雄）,选项 
+- $ 是一个命名惯例，用来表明 heroes$ 是一个 Observable，而不是数组
+- `*ngFor` 不能直接使用 Observable。 不过，它后面还有一个管道字符（|），后面紧跟着一个 async，它表示 Angular 的 `AsyncPipe`
+ 
+ AsyncPipe 会自动订阅到 Observable，这样你就不用再在组件类中订阅了
 
